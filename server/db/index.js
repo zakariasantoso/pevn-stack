@@ -15,5 +15,6 @@ module.exports = {
     const res = await pool.query(text, params);
     const duration = Date.now() - start;
     console.log(`Query execution time: ${duration}ms`, { text, params, rows: res.rowCount });
+    return res;
   },
 };
